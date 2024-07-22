@@ -1,1 +1,1 @@
-# artgenerator
+# project readme
