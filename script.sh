@@ -15,4 +15,3 @@ docker image prune -f
 # Run the container 
 echo "Running the Docker container at http://localhost:8000"
 docker run -d -p 8000:8000 --name dockerize-it ascii-art-web:latest
-
