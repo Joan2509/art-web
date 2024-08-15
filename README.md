@@ -1,4 +1,4 @@
-# Ascii-art-web Dockerize
+# Ascii-Art-Web Dockerize
 
 ## Description
 
@@ -9,7 +9,7 @@ Ascii-art-web is a web application that provides a graphical user interface (GUI
 
 To install, clone the repository locally using Git:
 ```script
-git clone https://learn.zone01kisumu.ke/git/jwambugu/ascii-art-web.git
+git clone https://learn.zone01kisumu.ke/git/jwambugu/ascii-art-web-dockerize
 ```
 
 Alternatively, download the project directly from Gitea and access it through your file manager.
@@ -21,12 +21,12 @@ To build and run the application using Docker:
 
 1. Build the Docker image:
 ```go
-docker build -t ascii-art-web .
+docker build -t ascii-art-web:latest .
 ```
 
 2. Run the Docker container:
 ```go
-docker run -d -p 8000:8000 --name ascii-art-web-container ascii-art-web
+docker run -d -p 8000:8000 --name dockerize it  ascii-art-web:latest
 ```
 
 3. Open a web browser at the provided port:  [http://localhost:8000](http://localhost:8000)
@@ -42,21 +42,6 @@ The application is implemented in Go programming language. It creates an HTTP se
 3. When the form is submitted, the client sends a POST request to /ascii-art endpoint with text and banner style as form data.
 4. Server processes the request, generates ASCII art banner using the selected style, and responds with an HTML template displaying the banner.
 
-## Code Structure
-
-The code is organized into the following directories:
-
-- `ascii`: contains the ASCII art generation
-- `banner`: contains resources related to banner styles 
-- `handlers`: contains server endpoint handlers and related logic for HTTP requests and responses.
-- `templates`: contains HTML templates for main page and ASCII art banner display
-
-
-## HTTP Endpoints
-
-- `GET /`: returns the main page HTML template
-- `POST /ascii-art`: processes form data and generates ASCII art banner
-
 ## HTTP Status Codes
 
 - `200: OK`: Returned when request is successful.
@@ -70,9 +55,12 @@ The code is organized into the following directories:
 - Application uses Go templates for displaying data to the user.
 - Application uses form data to send text and banner style to the server.
 - Application uses HTTP server to handle GET and POST requests.
+- The application can also be run by running the executable script.sh
+- Unused objects are catered for using garbage collection by stopping and removing unused containers.
 
 ## Authors
 
-- [Joan Wambugu](https://github.com/Joan2509)
 - [Cherrypick14](https://github.com/Cherrypick14)
 - [Raymond](https://github.com/anxielray)
+- [Joan Wambugu](https://github.com/Joan2509)
+

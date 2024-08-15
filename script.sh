@@ -3,7 +3,7 @@
 # Build the Docker image
 docker build -t ascii-art-web:latest .
 
-#hgmyutytuy
+#Stop all unused containers
 docker stop $(docker ps -q)
 
 # Remove any stopped containers
